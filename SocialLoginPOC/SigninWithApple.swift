@@ -31,10 +31,7 @@ struct SigninWithApple: UIViewControllerRepresentable {
 }
 
 class SigninWithAppleController: UIViewController {
-//    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-//
-//    }
-    
+
     var onCompletion: ((ASAuthorizationAppleIDCredential?) -> ())?
     var onFailure: ((String) -> ())?
 
@@ -68,7 +65,6 @@ class SigninWithAppleController: UIViewController {
         request.requestedScopes = [.fullName, .email]
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = self
-//        authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
     }
 }
