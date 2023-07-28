@@ -21,10 +21,10 @@ struct ContentView: View {
     func appleSignInButton() -> some View {
         return SigninWithApple (
             onCompletion: { profile in
-            
+                print(profile)
             },
             onFailure: { error in
-            
+                // TODO: - Handle Error
             }
         )
         .frame(height: 60, alignment: .center)
@@ -36,7 +36,7 @@ struct ContentView: View {
                 print(profile)
             },
             onFailure: { error in
-            
+                // TODO: - Handle Error
             }
         )
         .frame(height: 60, alignment: .center)
@@ -48,7 +48,7 @@ struct ContentView: View {
                 print(profile)
             },
             onFailure: { error in
-            
+                // TODO: - Handle Error
             }
         )
         .frame(height: 60, alignment: .center)
